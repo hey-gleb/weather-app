@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location__title {
+    
+}
+
+.temperature__value {
+    margin-right: 4px;
+}
+
+.temperature {
+    display: flex;
+}
