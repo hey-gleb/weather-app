@@ -5,6 +5,7 @@ window.addEventListener('load', ()=> {
     let lat;
     let temperatureElement = document.querySelector('.temperature__value');
     let cityElement = document.querySelector('.location__title');
+    let weatherDescriptionElement = document.querySelector('.temperature__weather-description');
     const apiKey = '01c589c6c9b479b60399704fb4f0b10e';
 
     if  (navigator.geolocation) {
@@ -19,10 +20,12 @@ window.addEventListener('load', ()=> {
             })
             .then(data => {
                 console.log(data);
-                const { name } = data;
-                const {temp} = data.main;
+                const { name, weather } = data;
+                const { temp } = data.main;
+                const [ current ] = weather;
                 temperatureElement.textContent = temp;
                 cityElement.textContent = name; 
+                weatherDescriptionElement.textContent = current.main;
             })
             .catch(error => {
                 console.log(error);

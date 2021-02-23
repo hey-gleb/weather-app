@@ -28,3 +28,41 @@ body {
 .temperature {
     display: flex;
 }
+
+.temperature__separator {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    /* background:rgba(255, 255, 255, 0.3); */
+}
+
+/* Snowflake effect styles */
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.snowflake {
+    position: fixed;
+    background-color: #ccc;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+/* Rain effect style */
